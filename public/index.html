@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Bike Store </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class = "navbar">
+        <div class = "container">
+            <div class = "logo-area">
+            <img src = "/img/Logo.png" class = "logo-img">
+            <span class = "logo-text"> Dri's Bike Store </span>
+        </div>
+
+        <!-- Navigation -->
+        <ul class = "nav-links">
+            <li><a href = "index.html" class = "nav-item"> Home </a></li>
+            <li><a href = "#about" class = "nav-item"> About </a></li>
+            <li><a href = "#new" class = "nav-item"> New Product </a></li>
+            <li><a href = "#offer" class = "nav-item"> Limited Offer </a></li>
+            <li class = "dropdown">
+                <button id = "categoryBtn" class = "nav-item dropdown-toggle">
+                    Category <span class = "arrow"> &#9662; </span>
+                </button>
+                <ul id = "categoryMenu" class = "dropdown-menu">
+                    <li><a href="#mountain" class = "dropdown-link"> Mountain Bikes </a></li>
+                    <li><a href="#road" class = "dropdown-link"> Road Bikes </a></li>
+                    <li><a href="#electric" class = "dropdown-link"> Electric Bikes </a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <section id = "about" class = "about-section">
+        <div class = "about-title">
+            <h2> About Us </h2>
+        </div>
+        <div class = "about-content">
+            <div class = "about-image">
+                <img src = "/img/about.jpg" />
+            </div>
+            <div class = "about-text">
+                <p>
+                    Welcome to <strong> Dri's Bike Store </strong> — your go-to hub for all things cycling! We proudly support riders of every age and skill level with high-quality bikes, gear, and top-notch service.
+                </p>
+                <p>
+                    Our goal is to fuel your cycling adventures — whether you're hitting the trails, navigating city streets, or cruising on a weekend ride. We believe cycling unites people and leads to a healthier, more eco-friendly way of life.
+                </p>
+                <p>
+                    Drop in, meet our friendly team, and let us help you ride better and go farther.
+                </p>
+            </div>
+         </div>
+    </section>
+
+    <section class = "product" id = "new">
+        <h2 class = "section-title"> New Products </h2>
+        <div class = "product-list">
+            <!-- Product 1 -->
+            <div class = "product-card">
+                <img src = "" alt = "" class = "product-image"/>
+                <div class = "product-info">
+                    <h3 class = "product-name"> </h3>
+                    <p class = "product-category"> </p>
+                    <p class = "product-description"> </p>
+                    <p class = "product-price"> </p>
+                </div>
+                <button class = "view-button"> View Details </button>
+            </div>  
+        </div>
+    </section>
+    <section class = "product" id = "offer">
+        <h2 class = "section-title"> Limited Offers </h2>
+        <div class = "product-list">
+            <!-- Product 1 -->
+            <div class = "product-card">
+                <img src = "" alt = "" class = "product-image"/>
+                <div class = "product-info">
+                    <h3 class = "product-name"> </h3>
+                    <p class = "product-category">  </p>
+                    <p class = "product-description">  </p>
+                    <p class = "product-price">  </p>
+                </div>
+                <button class = "view-button"> View Details </button>
+            </div>
+
+        </div>
+    </section>
+    <section class = "product" id = "mountain">
+        <h2 class = "section-title"> Mountain Bikes </h2>
+        <div class = "product-list">
+            <!-- Product 1 -->
+            <div class = "product-card">
+                <img src = "" alt = "" class = "product-image"/>
+                <div class = "product-info">
+                    <h3 class = "product-name"> </h3>
+                    <p class = "product-category">  </p>
+                    <p class = "product-description">  </p>
+                    <p class = "product-price">  </p>
+                </div>
+                <button class = "view-button"> View Details </button>
+            </div>
+
+        </div>
+    </section>
+    <section class = "product" id = "road">
+        <h2 class = "section-title"> Road Bikes </h2>
+        <div class = "product-list">
+            <!-- Product 1 -->
+            <div class = "product-card">
+                <img src = "" alt = "" class = "product-image"/>
+                <div class = "product-info">
+                    <h3 class = "product-name"> </h3>
+                    <p class = "product-category"> </p>
+                    <p class = "product-description"> </p>
+                    <p class = "product-price"> </p>
+                </div>
+                <button class = "view-button"> View Details </button>
+            </div>
+
+        </div>
+    </section>
+    <section class = "product" id = "electric">
+        <h2 class = "section-title"> Electric Bikes </h2>
+        <div class = "product-list">
+            <!-- Product 1 -->
+            <div class = "product-card">
+                <img src = "" alt = "" class = "product-image"/>
+                <div class = "product-info">
+                    <h3 class = "product-name"> </h3>
+                    <p class = "product-category"> </p>
+                    <p class = "product-description"> </p>
+                    <p class = "product-price"> </p>
+                </div>
+                <button class = "view-button"> View Details </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id = "year"> </span> <strong> Dri's Bike Store </strong></p>
+    </footer>
+
+    <div id = "productModal" class = "modal">
+        <div class = "modal-content">
+            <span class = "close-btn"> &times; </span>
+            <img id = "modalImage" src = "" alt="Product Image"/>
+            <h3 id = "modalTitle"> </h3>
+            <p id = "modalCategory"> </p>
+        <p id = "modalDescription"> </p>
+    <p id = "modalPrice"> </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
