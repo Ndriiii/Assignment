@@ -25,7 +25,6 @@ const productController = {
     });
   },
 
-  // Get new products (products created within last 2 weeks)
   getNewProducts: (req, res) => {
     const query = `
       SELECT 
