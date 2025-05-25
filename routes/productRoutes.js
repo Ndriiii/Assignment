@@ -10,6 +10,8 @@ router.get('/home', productController.getHomePageData);
 
 router.get('/new', productController.getNewProducts);
 
+router.get('/bestsellers', productController.getBestSellerProducts);
+
 router.get('/discount', productController.getDiscountProducts);
 
 router.get('/category/:category', productController.getProductsByCategory);

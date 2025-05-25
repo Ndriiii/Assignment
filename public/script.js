@@ -27,6 +27,7 @@ async function loadHomePageData() {
     
     if (response.ok) {
       populateSection('new', data.newProducts);
+      populateSection('bestsellers', data.bestSellerProducts);
       populateSection('offer', data.discountProducts);
       populateSection('mountain', data.mountainBikes);
       populateSection('road', data.roadBikes);

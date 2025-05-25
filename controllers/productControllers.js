@@ -49,6 +49,30 @@ const productController = {
     });
   },
 
+  getBestSellerProducts: (req, res) => {
+    const query = `
+      SELECT 
+        id, name, category, description, 
+        CASE 
+          WHEN is_discount = TRUE THEN price 
+          ELSE price 
+        END as price,
+        original_price,
+        image_name, is_discount, discount_percentage, view_count, created_at
+      FROM products 
+      WHERE view_count > 100
+      ORDER BY view_count DESC, created_at DESC
+    `;
+    
+    db.query(query, (err, results) => {
+      if (err) {
+        console.error('Error fetching best seller products:', err);
+        return res.status(500).json({ error: 'Failed to fetch best seller products' });
+      }
+      res.json(results);
+    });
+  },
+
   getDiscountProducts: (req, res) => {
     const query = `
       SELECT 
@@ -169,7 +193,19 @@ const productController = {
         FROM products 
         WHERE created_at >= DATE_SUB(NOW(), INTERVAL 2 WEEK)
         ORDER BY created_at DESC
-        LIMIT 8
+      `,
+      bestSellerProducts: `
+        SELECT 
+          id, name, category, description, 
+          CASE 
+            WHEN is_discount = TRUE THEN price 
+            ELSE price 
+          END as price,
+          original_price,
+          image_name, is_discount, discount_percentage, view_count, created_at
+        FROM products 
+        WHERE view_count > 100
+        ORDER BY view_count DESC, created_at DESC
       `,
       discountProducts: `
         SELECT 
